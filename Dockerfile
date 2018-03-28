@@ -7,7 +7,7 @@ ENV RCLONE_VERSION=v1.40
 
 RUN apk update \
 && apk upgrade \
-&& apk add coreutils mongodb wget ca-certificates \
+&& apk add coreutils mongodb-tools wget ca-certificates \
 && cd /tmp \
 && wget -q https://downloads.rclone.org/$RCLONE_VERSION/rclone-$RCLONE_VERSION-linux-amd64.zip \
 && unzip /tmp/rclone-$RCLONE_VERSION-linux-amd64.zip \
